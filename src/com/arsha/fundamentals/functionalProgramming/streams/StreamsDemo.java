@@ -216,9 +216,7 @@ public class StreamsDemo {
         public Book[] filterBooksByPublisher(Publisher publisher, Book[] books) {
             return Arrays.stream(books)
                     .filter(Objects::nonNull)
-                    .filter(book -> {
-                        return book.publisher.equals(publisher);
-                    })
+                    .filter(book -> book.publisher.equals(publisher))
                     .toArray(Book[]::new);
         }
 
